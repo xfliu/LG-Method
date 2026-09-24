@@ -1,0 +1,21 @@
+Unit regular tetrahedron — two-stage Lehmann–Goerisch bounds (LGPaper.jl on VFEM.jl)
+date: 2026-09-25T00:36:32.100   Julia 1.12.6   mode: float
+
+Stage 1: Crouzeix–Raviart projection bounds, C_h = 0.3804 h_max
+ level   tets   interior facets   h_max      lambda_h^CR(1..5)                               lower bounds(1..5)
+  1        8          8   0.707107   77.5048 98.1050 98.1050 135.0000 160.0000   11.7296 12.1146 12.1146 12.5377 12.7223
+  2       64         96   0.353553   120.1349 169.9591 170.5620 176.6441 253.7155   37.8616 41.7157 41.7519 42.1068 45.3938
+  3      512        896   0.216506   142.6179 250.3783 251.4869 253.3077 355.4692   72.4914 92.7905 92.9424 93.1899 104.2080
+
+Separators used below (paper, CR level-6 mesh with 127661 tets): rho_2 = 264.5223894731, rho_5 = 386.4419682205
+
+Lehmann–Goerisch bounds regular tetrahedron — CG^8+RT^8, 8 tets, λ̂=200.0, floating-point mode
+  DimCG=969 interior=455 DimRT=3960 DimDG=1320
+  k       lower bound            upper bound     lb-paper      ub-paper
+  1      150.972503252160      150.972775230587  +2.419e-03  -1.339e-10
+  2      278.599821853471      278.699425014534  +3.867e-01  -2.801e-08
+  3      278.691218741323      278.699425014534  +3.864e-01  -2.801e-08
+  4      278.691220950184      278.725307242619  +3.864e-01  -1.421e-10
+  group [1]       rho=264.5223894731  B positive definite: true  margin(Lemma 4.5)=1.135e+02
+  group [2, 3, 4] rho=386.4419682205  B positive definite: true  margin(Lemma 4.5)=1.077e+02
+  relative gaps (ub-lb)/ub: 0.000180%  0.035739%  0.002944%  0.012229%

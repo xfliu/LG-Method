@@ -1,0 +1,67 @@
+Special tetrahedron T_F — Lehmann–Goerisch bounds (LGPaper.jl on VFEM.jl)
+date: 2026-09-25T00:36:28.274   Julia 1.12.6   mode: float
+rho_2 = lambda_2 = 345.436154038128, rho_4 = lambda_4 = 394.784176043574, lambda_hat = 200.0
+
+Lehmann–Goerisch bounds T_F level 2 — CG^2+RT^2, 64 tets, λ̂=200.0, floating-point mode
+  DimCG=165 interior=35 DimRT=1728 DimDG=640
+  k       lower bound            upper bound            exact              lb<exact<ub     lb-paper      ub-paper
+  1      171.349851178478      209.366708008783      197.392088021787  yes  +1.057e-08  -1.253e-11
+  2     -881.761166649968      372.496833801403      345.436154038128  yes  +4.739e-06  -1.683e-11
+  3       65.218698984582      433.869050009532      345.436154038128  yes  +4.906e-07  -1.563e-11
+  group [1]       rho=345.4361540381  B positive definite: true  margin(Lemma 4.5)=1.361e+02
+  group [2, 3]    rho=394.7841760436  B positive definite: true  margin(Lemma 4.5)=-3.908e+01
+
+Lehmann–Goerisch bounds T_F level 3 — CG^2+RT^2, 512 tets, λ̂=200.0, floating-point mode
+  DimCG=969 interior=455 DimRT=13056 DimDG=5120
+  k       lower bound            upper bound            exact              lb<exact<ub     lb-paper      ub-paper
+  1      193.964528919730      198.757372320974      197.392088021787  yes  +1.062e-08  -5.505e-11
+  2      238.851020965408      350.123121925619      345.436154038128  yes  +4.646e-07  -5.770e-11
+  3      297.073951563707      355.775564719405      345.436154038128  yes  +3.378e-07  -6.008e-11
+  group [1]       rho=345.4361540381  B positive definite: true  margin(Lemma 4.5)=1.467e+02
+  group [2, 3]    rho=394.7841760436  B positive definite: true  margin(Lemma 4.5)=3.901e+01
+
+Lehmann–Goerisch bounds T_F level 2 — CG^3+RT^3, 64 tets, λ̂=200.0, floating-point mode
+  DimCG=455 interior=165 DimRT=3520 DimDG=1280
+  k       lower bound            upper bound            exact              lb<exact<ub     lb-paper      ub-paper
+  1      194.723239851283      198.558427777505      197.392088021787  yes  +5.811e-08  -2.180e-11
+  2      264.794134932599      351.378479800475      345.436154038128  yes  +3.633e-06  -2.319e-11
+  3      289.115775491412      353.835740669231      345.436154038128  yes  +3.107e-06  -2.359e-11
+  group [1]       rho=345.4361540381  B positive definite: true  margin(Lemma 4.5)=1.469e+02
+  group [2, 3]    rho=394.7841760436  B positive definite: true  margin(Lemma 4.5)=4.095e+01
+
+Lehmann–Goerisch bounds T_F level 3 — CG^3+RT^3, 512 tets, λ̂=200.0, floating-point mode
+  DimCG=2925 interior=1771 DimRT=26880 DimDG=10240
+  k       lower bound            upper bound            exact              lb<exact<ub     lb-paper      ub-paper
+  1      197.326517789203      197.417591315593      197.392088021787  yes  +1.006e-07  -7.483e-11
+  2      342.227093386763      345.586675494792      345.436154038128  yes  +2.508e-06  -7.969e-11
+  3      343.846090917553      345.738849278471      345.436154038128  yes  +2.438e-06  -7.657e-11
+  group [1]       rho=345.4361540381  B positive definite: true  margin(Lemma 4.5)=1.480e+02
+  group [2, 3]    rho=394.7841760436  B positive definite: true  margin(Lemma 4.5)=4.905e+01
+
+Lehmann–Goerisch bounds T_F level 0 — CG^6+RT^6, 1 tets, λ̂=200.0, floating-point mode
+  DimCG=84 interior=10 DimRT=280 DimDG=84
+  k       lower bound            upper bound            exact              lb<exact<ub     lb-paper      ub-paper
+  1      195.256112487145      198.585756197546      197.392088021787  yes  +1.030e-03  -1.988e-08
+  2     -762.451684266954      413.560898878721      345.436154038128  yes  +2.897e-01  -2.728e-11
+  3     -762.451683943535      413.560898878721      345.436154038128  yes  +2.897e-01  -2.723e-11
+  group [1]       rho=345.4361540381  B positive definite: true  margin(Lemma 4.5)=1.469e+02
+  group [2, 3]    rho=394.7841760436  B positive definite: true  margin(Lemma 4.5)=-1.878e+01
+
+Lehmann–Goerisch bounds T_F level 1 — CG^6+RT^6, 8 tets, λ̂=200.0, floating-point mode
+  DimCG=455 interior=165 DimRT=2016 DimDG=672
+  k       lower bound            upper bound            exact              lb<exact<ub     lb-paper      ub-paper
+  1      197.310148175813      197.431561337265      197.392088021787  yes  +1.747e-04  -5.500e-11
+  2      310.534166413620      345.975274300534      345.436154038128  yes  +3.483e-02  -6.168e-11
+  3      340.728089693585      349.824738185211      345.436154038128  yes  +2.367e-02  -6.202e-11
+  group [1]       rho=345.4361540381  B positive definite: true  margin(Lemma 4.5)=1.480e+02
+  group [2, 3]    rho=394.7841760436  B positive definite: true  margin(Lemma 4.5)=4.496e+01
+
+Lehmann–Goerisch bounds T_F level 2 — CG^6+RT^6, 64 tets, λ̂=200.0, floating-point mode
+  DimCG=2925 interior=1771 DimRT=15232 DimDG=5376
+  k       lower bound            upper bound            exact              lb<exact<ub     lb-paper      ub-paper
+  1      197.392011438749      197.392118304152      197.392088021787  yes  +4.063e-05  -6.310e-11
+  2      345.383744447699      345.437290497833      345.436154038128  yes  +8.387e-04  -6.617e-11
+  3      345.424389970842      345.441255265756      345.436154038128  yes  +8.380e-04  -6.128e-11
+  group [1]       rho=345.4361540381  B positive definite: true  margin(Lemma 4.5)=1.480e+02
+  group [2, 3]    rho=394.7841760436  B positive definite: true  margin(Lemma 4.5)=4.934e+01
+

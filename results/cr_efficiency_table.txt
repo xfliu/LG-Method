@@ -1,0 +1,7 @@
+Predicted direct-CR cost for matching the CG^8+RT^8 LG interval widths (Table 8)
+ k   CR order q_k   eps_k^LG      N_pred_CR,k    eta_k^eff
+ 1   2.047          2.691e-03     1.21e+10      2.29e+06
+ 2   1.949          4.863e-01     4.44e+07      8.41e+03
+ 3   1.948          3.946e-01     6.14e+07      1.16e+04
+ 4   1.946          4.205e-01     5.62e+07      1.06e+04
+max eta = 2.29e+06

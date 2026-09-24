@@ -1,0 +1,26 @@
+  1        8          8   0.707107   77.5048 98.1050 98.1050 135.0000 160.0000   11.7296 12.1146 12.1146 12.5377 12.7223
+  2       64         96   0.353553   120.1349 169.9591 170.5620 176.6441 253.7155   37.8616 41.7157 41.7519 42.1068 45.3938
+  3      512        896   0.216506   142.6179 250.3783 251.4869 253.3077 355.4692   72.4914 92.7905 92.9424 93.1899 104.2080
+  4     4096       7680   0.108253   148.8166 271.2567 271.3980 271.7024 401.2582   118.8293 185.7943 185.8606 186.0033 238.7824
+
+===== regular tetrahedron, 8 tets, CG^8 + RT^8 =====
+[CG^8] 8 tets, DimCG=969, interior=455  (0.1s)
+[CG^8] Ritz upper bounds: 150.9727752306 278.6994250145 278.6994250145 278.7253072426 
+[RT^8] DimRT=3960, DimDG=1320, constraint residual 1.06e-15  (5.0s)
+[LG] interval matrices assembled, max rad(A2) = 1.42e-11  (11.9s)
+[LG] group [1] rho=264.522389: B_spd=true, margin=1.135e+02
+[LG] group [2, 3, 4] rho=386.441968: B_spd=true, margin=1.077e+02
+[LG] done in 23.2s
+
+Lehmann–Goerisch bounds regular tetrahedron — CG^8+RT^8, 8 tets, λ̂=200.0, interval mode
+  DimCG=969 interior=455 DimRT=3960 DimDG=1320
+  k       lower bound            upper bound     lb-paper      ub-paper
+  1      150.972496207385      150.972775230741  +2.412e-03  +2.032e-11
+  2      278.599736559842      278.699425014691  +3.866e-01  -2.785e-08
+  3      278.691133597808      278.699425014691  +3.864e-01  -2.785e-08
+  4      278.691135600803      278.725307242778  +3.864e-01  +1.717e-11
+  group [1]       rho=264.5223894731  B positive definite: true  margin(Lemma 4.5)=1.135e+02
+  group [2, 3, 4] rho=386.4419682205  B positive definite: true  margin(Lemma 4.5)=1.077e+02
+  all interval flags guaranteed: false
+  relative gaps (ub-lb)/ub: 0.000185%  0.035769%  0.002975%  0.012260%
+results written to /home/xfliu/Workspace/Paper_Plum_LG/github/scripts/../results/regular_tetrahedron_p8_interval_20260925.txt

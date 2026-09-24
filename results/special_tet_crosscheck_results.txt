@@ -1,0 +1,60 @@
+Special tetrahedron Julia/VFEM cross-check
+timestamp: 2026-09-25 00:33:05
+Julia: 1.12.6
+
+CG2 ref2: tets=64 dim=165 interior=35
+  upper bounds
+  1  julia 209.366708008783  reference 209.366708008859  diff -7.554e-11
+  2  julia 372.496833801403  reference 372.496833801567  diff -1.638e-10
+  3  julia 433.869050009532  reference 433.869050009704  diff -1.716e-10
+  4  julia 442.769528225684  reference 442.769528225800  diff -1.162e-10
+
+CG2 ref3: tets=512 dim=969 interior=455
+  upper bounds
+  1  julia 198.757372320975  reference 198.757372321342  diff -3.671e-10
+  2  julia 350.123121925617  reference 350.123121926045  diff -4.277e-10
+  3  julia 355.775564719406  reference 355.775564719856  diff -4.499e-10
+  4  julia 401.907423191444  reference 401.907423191900  diff -4.559e-10
+
+CG3 ref2: tets=64 dim=455 interior=165
+  upper bounds
+  1  julia 198.558427777505  reference 198.558427778767  diff -1.262e-09
+  2  julia 351.378479800475  reference 351.378479802418  diff -1.943e-09
+  3  julia 353.835740669231  reference 353.835740671169  diff -1.938e-09
+  4  julia 403.967367824871  reference 403.967367826900  diff -2.029e-09
+
+CG3 ref3: tets=512 dim=2925 interior=1771
+  upper bounds
+  1  julia 197.417591315597  reference 197.417591322189  diff -6.592e-09
+  2  julia 345.586675494799  reference 345.586675502172  diff -7.373e-09
+  3  julia 345.738849278470  reference 345.738849286263  diff -7.793e-09
+  4  julia 395.063621389064  reference 395.063621396500  diff -7.436e-09
+
+CR ref2: tets=64 interior_faces=96 C_h=0.111803398875
+  raw CR eigenvalues
+  1  julia 154.809042717544  reference 154.809042717544  diff -1.990e-13
+  2  julia 202.486779233889  reference 202.486779233889  diff -1.705e-13
+  3  julia 202.675696872475  reference 202.675696872475  diff -8.527e-14
+  4  julia 224.906408971318  reference 224.906408971317  diff 1.137e-12
+  5  julia 278.520983378474  reference 278.520983378474  diff 1.705e-13
+  Liu lower bounds
+  1  julia 52.743809497581  reference 52.743809497581  diff 6.395e-14
+  2  julia 57.344072464712  reference 57.344072464712  diff -4.121e-13
+  3  julia 57.359213859523  reference 57.359213859523  diff 2.842e-14
+  4  julia 59.009952524146  reference 59.009952524146  diff 4.121e-13
+  5  julia 62.148883059255  reference 62.148883059255  diff 1.066e-13
+
+CR ref3: tets=512 interior_faces=896 C_h=0.065550553011
+  raw CR eigenvalues
+  1  julia 185.289757737925  reference 185.289757737926  diff -9.095e-13
+  2  julia 307.383881911103  reference 307.383881911103  diff 3.979e-13
+  3  julia 308.146613030421  reference 308.146613030419  diff 1.762e-12
+  4  julia 353.103771429679  reference 353.103771429679  diff 0.000e+00
+  5  julia 428.250610605056  reference 428.250610605057  diff -1.421e-12
+  Liu lower bounds
+  1  julia 103.158428580422  reference 103.158428580423  diff -5.400e-13
+  2  julia 132.447945026037  reference 132.447945026037  diff 3.126e-13
+  3  julia 132.589357221886  reference 132.589357221885  diff 5.116e-13
+  4  julia 140.274023601466  reference 140.274023601466  diff -3.979e-13
+  5  julia 150.785070367920  reference 150.785070367920  diff -1.421e-13
+
