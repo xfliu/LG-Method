@@ -1,0 +1,35 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+  Refined mesh: 10 nodes, 8 tets, hmax~0.707107
+  Refined mesh: 35 nodes, 64 tets, hmax~0.353553
+[TF-ref2-P6] CG^6: DimCG=2925 interior=1771 (64 tets)
+[TF-ref2-P6] Ritz upper bounds (double): 197.3921183042 345.4372904978 345.4412552658 
+  Scalar RT6: DimRT=15232, DimDG=5376
+  DegK=84, DegF=28, DegRTInner=168, DegRTElt=280
+  Scalar RT done: A_rt 15232x15232 (nnz=4942336), B_rt 5376x15232 (nnz=1505280)
+[TF-ref2-P6] Factoring shifted SP (20608)...
+[TF-ref2-P6] Assembling rigorous A0,A1 (interval)...
+[TF-ref2-P6] Assembling rigorous A2 (full form, tight via b=MFB\w1)...
+[TF-ref2-P6] A2(k,k)*(lambda_k+lhat) [~1]: 1.000000 1.000002 1.000009 
+[TF-ref2-P6] A2 max interval radius: 6.983e-11
+[TF-ref2-P6] group [1] rho=345.436154: B_spd=1 margin=1.480e+02 
+[TF-ref2-P6] group [2  3] rho=394.784176: B_spd=1 margin=4.934e+01 
+
+Certified T_F P6 ref=2 rigorous LG bounds vs EXACT:
+  k     lower bound        exact              upper bound        lb<exact ub>exact
+  1   197.391970811763   197.392088021787   197.392118304215      1        1
+  2   345.382905771827   345.436154038128   345.437290497899      1        1
+  3   345.423551946928   345.436154038128   345.441255265817      1        1
+  PASS: all certified bounds bracket the exact eigenvalues.

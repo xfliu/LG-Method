@@ -1,0 +1,35 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+One-element P10 bubble rigorous LG, unit regular tetrahedron
+  Dim bubble=84, Dim P_10=286
+  Ritz upper bounds (double): 150.9728482447 278.7430175262 278.7430175262 278.7430175262 
+  rho2=264.5223894731 rho5=386.4419682205 lhat=200.0
+  Scalar RT10: DimRT=924, DimDG=286
+  DegK=286, DegF=66, DegRTInner=660, DegRTElt=924
+  Scalar RT done: A_rt 924x924 (nnz=853776), B_rt 286x924 (nnz=264264)
+  DimRT=924 DimDG=286
+  ||w1|| per col: 1.00e+04 2.04e+04 1.99e+04 2.10e+04 
+  Assembling rigorous Goerisch A2 (full form, tight via b=MFB\w1)...
+  A2(k,k)*(lambda_k+lhat) [should be ~1]: 1.000000 1.000069 1.000069 1.000069 
+  A2 max interval radius: 1.292e-03
+
+  B PD: lambda1 group spd=1 (margin 1.135e+02); cluster spd=0 (margin 1.077e+02)
+
+Certified one-element P10 rigorous LG bounds:
+  k     lower bound        upper bound        rel gap
+  1   148.086546617439   150.972848260065   1.911802%
+  2   NaN   278.743017526495   NaN%
+  3   NaN   278.743017526495   NaN%
+  4   NaN   278.743017526495   NaN%

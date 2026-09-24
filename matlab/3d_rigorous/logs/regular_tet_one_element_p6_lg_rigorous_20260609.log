@@ -1,0 +1,24 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+One-element P6 bubble rigorous LG, unit regular tetrahedron
+  Dim bubble=10, Dim P_6=84
+  Ritz upper bounds (double): 151.5388540989 321.4392676570 321.4392676570 321.4392676570 
+  rho2=264.5223894731 rho5=386.4419682205 lhat=200.0
+  Scalar RT6: DimRT=280, DimDG=84
+  DegK=84, DegF=28, DegRTInner=168, DegRTElt=280
+  Scalar RT done: A_rt 280x280 (nnz=78400), B_rt 84x280 (nnz=23520)
+  DimRT=280 DimDG=84
+  Assembling rigorous Goerisch A2 (interval, element-wise)...
+  constraint residual: max radius 1.074e-03, max |sup| 1.074e-03

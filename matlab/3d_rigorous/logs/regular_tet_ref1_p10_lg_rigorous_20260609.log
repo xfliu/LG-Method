@@ -1,0 +1,34 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+  Refined mesh: 10 nodes, 8 tets, hmax~0.707107
+[reg-8elt-P10] CG^10: DimCG=1771 interior=969 (8 tets)
+[reg-8elt-P10] Ritz upper bounds (double): 150.9727150367 278.6977785180 278.6977785181 278.6979852546 
+  Scalar RT10: DimRT=6864, DimDG=2288
+  DegK=286, DegF=66, DegRTInner=660, DegRTElt=924
+  Scalar RT done: A_rt 6864x6864 (nnz=6795360), B_rt 2288x6864 (nnz=2114112)
+[reg-8elt-P10] Factoring shifted SP (9152)...
+[reg-8elt-P10] Assembling rigorous A0,A1 (interval)...
+[reg-8elt-P10] Assembling rigorous A2 (full form, tight via b=MFB\w1)...
+[reg-8elt-P10] A2(k,k)*(lambda_k+lhat) [~1]: 1.000000 1.000000 1.000000 1.000000 
+[reg-8elt-P10] A2 max interval radius: 2.306e-06
+[reg-8elt-P10] group [1] rho=264.522389: B_spd=1 margin=1.135e+02 
+[reg-8elt-P10] group [2  3  4] rho=386.441968: B_spd=1 margin=1.077e+02 
+
+Certified 8-element P10 rigorous LG bounds:
+  k     lower bound        upper bound        rel gap
+  1   150.797753940209   150.972715036828   0.115889%
+  2   264.116621512577   278.697778518244   5.231888%
+  3   264.117504370875   278.697778518244   5.231572%
+  4   264.117504370875   278.697985254828   5.231642%

@@ -1,0 +1,33 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+[TF-ref0-P6] CG^6: DimCG=84 interior=10 (1 tets)
+[TF-ref0-P6] Ritz upper bounds (double): 198.5857561975 413.5608988787 413.5608988787 
+  Scalar RT6: DimRT=280, DimDG=84
+  DegK=84, DegF=28, DegRTInner=168, DegRTElt=280
+  Scalar RT done: A_rt 280x280 (nnz=78400), B_rt 84x280 (nnz=23520)
+[TF-ref0-P6] Factoring shifted SP (364)...
+[TF-ref0-P6] Assembling rigorous A0,A1 (interval)...
+[TF-ref0-P6] Assembling rigorous A2 (full form, tight via b=MFB\w1)...
+[TF-ref0-P6] A2(k,k)*(lambda_k+lhat) [~1]: 1.002268 1.066007 1.066007 
+[TF-ref0-P6] A2 max interval radius: 9.602e-09
+[TF-ref0-P6] group [1] rho=345.436154: B_spd=1 margin=1.469e+02 
+[TF-ref0-P6] group [2  3] rho=394.784176: B_spd=1 margin=-1.878e+01 
+
+Certified T_F P6 ref=0 rigorous LG bounds vs EXACT:
+  k     lower bound        exact              upper bound        lb<exact ub>exact
+  1   195.255082156927   197.392088021787   198.585756217428      1        1
+  2   -762.741339957103   345.436154038128   413.560898878748      1        1
+  3   -762.741339957103   345.436154038128   413.560898878748      1        1
+  PASS: all certified bounds bracket the exact eigenvalues.

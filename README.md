@@ -11,10 +11,18 @@ lower bound supplies the rough spectral separation, and the Lehmann–Goerisch
 theorem with high-order conforming finite elements turns it into sharp certified
 lower bounds.
 
-This repository contains the **Julia version** of the three-dimensional
-computations of the paper (Sections 5.3 and 5.4), built on the in-house
-verified finite element library [`VFEM.jl`](https://github.com/xfliu/vfem)
-and the verified eigenvalue solver [`Veigs.jl`](https://github.com/xfliu/veigs).
+This repository contains
+
+* the **MATLAB/INTLAB implementation** with which the results in the paper were
+  produced (`matlab/`, see `matlab/README.md`): the rigorous three-dimensional
+  computations of Sections 5.3 and 5.4 with logs and saved results, the
+  Crouzeix–Raviart prebound computation, and the 2D dumbbell example of
+  Section 5.1;
+* a **Julia version** of the three-dimensional computations (Sections 5.3 and
+  5.4), built on the verified finite element library
+  [`VFEM.jl`](https://github.com/xfliu/vfem) and the verified eigenvalue solver
+  [`Veigs.jl`](https://github.com/xfliu/veigs).
+
 The computations can also be run online at <https://ganjin.online/xfliu/LG-Method>.
 
 ## Contents
@@ -27,6 +35,7 @@ The computations can also be run online at <https://ganjin.online/xfliu/LG-Metho
 | `scripts/cr_efficiency_table.jl` | Section 5.4, Table 8: predicted cost of a direct CR computation |
 | `scripts/special_tet_crosscheck.jl` | Independent cross-check of the CG Rayleigh–Ritz stage and the CR stage on `T_F` against the values used in the paper |
 | `results/` | Output of the scripts as run on the authors' server (Julia 1.12.6) |
+| `matlab/` | The MATLAB/INTLAB reference implementation (3D rigorous code, CR prebounds, 2D dumbbell example) — see `matlab/README.md` |
 
 Each `run_*` script compares its output with the numbers reported in the paper
 (columns `lb-paper`, `ub-paper`).
@@ -136,12 +145,13 @@ Run times on the authors' server (Julia 1.12.6, two Xeon Gold 5318Y): every
 configuration of Tables 5–7 takes between one and 25 seconds in interval mode
 after compilation.
 
-## Not covered by this repository
+## Not covered by the Julia code
 
 The two-dimensional examples of Sections 5.1 and 5.2 (Dirichlet Laplacian on the
 dumbbell domain, Steklov eigenvalues on the square and the L-shaped domain) were
-computed with the authors' MATLAB implementation and are not part of this Julia
-repository; `VFEM.jl` has no Steklov eigenvalue support at present.
+computed in MATLAB; the dumbbell code is in `matlab/2d_dumbbell/`, while the
+driver scripts of the Steklov runs are not included. `VFEM.jl` has no Steklov
+eigenvalue support at present.
 
 ## Citation
 

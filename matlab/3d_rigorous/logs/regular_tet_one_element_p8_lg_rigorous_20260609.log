@@ -1,0 +1,34 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+One-element P8 bubble rigorous LG, unit regular tetrahedron
+  Dim bubble=35, Dim P_8=165
+  Ritz upper bounds (double): 150.9835604732 280.6840860009 280.6840860009 280.6840860009 
+  rho2=264.5223894731 rho5=386.4419682205 lhat=200.0
+  Scalar RT8: DimRT=540, DimDG=165
+  DegK=165, DegF=45, DegRTInner=360, DegRTElt=540
+  Scalar RT done: A_rt 540x540 (nnz=291600), B_rt 165x540 (nnz=89100)
+  DimRT=540 DimDG=165
+  Assembling rigorous Goerisch A2 (full form, tight via b=MFB\w1)...
+  A2(k,k)*(lambda_k+lhat) [should be ~1]: 1.000025 1.002552 1.002552 1.002552 
+  A2 max interval radius: 6.504e-06
+
+  B PD: lambda1 group spd=1 (margin 1.135e+02); cluster spd=1 (margin 1.058e+02)
+
+Certified one-element P8 rigorous LG bounds:
+  k     lower bound        upper bound        rel gap
+  1   150.886096382582   150.983560488500   0.064553%
+  2   227.565854205454   280.684086001129   18.924561%
+  3   227.565854230234   280.684086001129   18.924561%
+  4   227.565854230234   280.684086001129   18.924561%

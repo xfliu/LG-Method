@@ -1,0 +1,36 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+  Refined mesh: 10 nodes, 8 tets, hmax~0.707107
+  Refined mesh: 35 nodes, 64 tets, hmax~0.353553
+  Refined mesh: 165 nodes, 512 tets, hmax~0.207289
+[TF-ref3-P2] CG^2: DimCG=969 interior=455 (512 tets)
+[TF-ref3-P2] Ritz upper bounds (double): 198.7573723210 350.1231219256 355.7755647194 
+  Scalar RT2: DimRT=13056, DimDG=5120
+  DegK=10, DegF=6, DegRTInner=12, DegRTElt=36
+  Scalar RT done: A_rt 13056x13056 (nnz=631296), B_rt 5120x13056 (nnz=184314)
+[TF-ref3-P2] Factoring shifted SP (18176)...
+[TF-ref3-P2] Assembling rigorous A0,A1 (interval)...
+[TF-ref3-P2] Assembling rigorous A2 (full form, tight via b=MFB\w1)...
+[TF-ref3-P2] A2(k,k)*(lambda_k+lhat) [~1]: 1.003272 1.008014 1.017474 
+[TF-ref3-P2] A2 max interval radius: 2.689e-14
+[TF-ref3-P2] group [1] rho=345.436154: B_spd=1 margin=1.467e+02 
+[TF-ref3-P2] group [2  3] rho=394.784176: B_spd=1 margin=3.901e+01 
+
+Certified T_F P2 ref=3 rigorous LG bounds vs EXACT:
+  k     lower bound        exact              upper bound        lb<exact ub>exact
+  1   193.964528909108   197.392088021787   198.757372321029      1        1
+  2   238.851020500837   345.436154038128   350.123121925677      1        1
+  3   297.073951225893   345.436154038128   355.775564719465      1        1
+  PASS: all certified bounds bracket the exact eigenvalues.

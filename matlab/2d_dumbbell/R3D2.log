@@ -1,0 +1,25 @@
+Switching of rounding mode not working correctly. Please check README.TXT
+Compute Laplace Eig Using Lagrange Element (Continuous Galerkin =CG))
+Processing the mesh...
+Create matrix for CG FEM applied to Laplace ...
+Start to solve eigenvalue problem. A0 = lambda M0
+Size of matrix:
+       17900
+
+ 
+intval LA_eig = 
+ 
+  19.5154382606184_
+  19.5155797417410_
+  47.511600713105__
+  47.5203858337702_
+  49.3430592464431_
+  49.3430616196484_
+ 
+Compute Laplace Eig Lower Bound by the Lehmann-Goerisch method
+create matrix...
+Size of matrix for RT:
+       92751
+
+deal with boundary condition...
+Solve RT fem system...

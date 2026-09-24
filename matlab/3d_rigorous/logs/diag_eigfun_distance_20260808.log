@@ -1,0 +1,96 @@
+Distance from the exact eigenspace to the computed discrete eigenfunctions on T_F.
+
+Purpose
+-------
+On T_F the exact eigenvalue mu = (pi^2/4)*140 = 345.436... is DOUBLE, but the CG^2
+Ritz upper bounds for lambda_2, lambda_3 have very different errors (27.06 vs 88.43
+at refinement level 2).  This diagnostic tests whether that asymmetry comes from the
+two discrete modes approximating the exact eigenspace E with different accuracy.
+
+For each computed mode u_h^(k) we compute the distance to the exact eigenspace,
+
+    sin(theta_k) = || u_h^(k) - P_E u_h^(k) || / || u_h^(k) ||
+
+in both the L^2 and the H^1-seminorm, and the exact identity
+
+    lambda_h - lambda = |u_h - u|_1^2 - lambda * ||u_h - u||_0^2,     u in E, ||u||_0 = 1,
+
+which decomposes the eigenvalue error into eigenfunction-error terms.
+
+Exact eigenfunctions
+--------------------
+Generalized sine functions of Jia-Li-Zhang 2021 (arXiv:2105.07547), Appendix
+"Exact eigenvalues of homogeneous Dirichlet Laplacian on T_F":
+
+    TS_k(s) = (1/24) sum_{sigma in S_4} (-1)^{|sigma|} exp(i*pi/2 * (k sigma) . s),
+    k in Lambda_0 = { k in Z^4 : sum k_j = 0, k_0=k_1=k_2=k_3 (mod 4), k_0<k_1<k_2<k_3 },
+    mu_k = (pi^2/4) |k|^2,     |k|^2 = sum_{j=0}^3 k_j^2,
+
+with homogeneous coordinates s1=(-x1+x2+x3)/2, s2=(x1-x2+x3)/2, s3=(x1+x2-x3)/2,
+s0 = -(s1+s2+s3).
+
+|k|^2 = 140 is attained by exactly two indices, kA=(-9,-1,3,7) and kB=(-7,-3,1,9),
+which are conjugate (kB = -rev(kA)), so TS_kB = conj(TS_kA) and the real eigenspace is
+
+    E = span_R { Re TS_kA, Im TS_kA }      (dim 2).
+
+|k|^2 = 80 (lambda_1) and 160 (lambda_4) are attained by self-conjugate indices only,
+hence those eigenvalues are simple.
+
+Independence
+------------
+This is a standalone P2-Lagrange re-implementation of the CG^2 space used by
+Code/run_conforming_lg_rigorous.m (which uses the VFEM3D Bernstein basis).  Both span
+the same conforming P2 space on the same mesh, so the Ritz values must agree -- that
+agreement is asserted below as a validation gate.
+
+NOT rigorous: this is a plain floating-point diagnostic, not an interval computation.
+It says nothing about the certified bounds; it only explains the observed error split.
+
+
+Lambda_0 index set, lowest |k|^2 (multiplicity = number of indices):
+  |k|^2=  80  mu= 197.3920880218  mult=1  [(-6, -2, 2, 6)]
+  |k|^2= 140  mu= 345.4361540381  mult=2  [(-9, -1, 3, 7), (-7, -3, 1, 9)]
+  |k|^2= 160  mu= 394.7841760436  mult=1  [(-8, -4, 4, 8)]
+  |k|^2= 208  mu= 513.2194288566  mult=1  [(-10, -2, 2, 10)]
+  |k|^2= 224  mu= 552.6978464610  mult=2  [(-12, 0, 4, 8), (-8, -4, 0, 12)]
+
+=== T_F, refinement level 2: 35 nodes, 64 tets, DimCG=165, interior=35 ===
+  Ritz (this code): 209.3667080088 372.4968338014 433.8690500095
+  Ritz (MATLAB)   : 209.3667080088 372.4968338014 433.8690500095
+  max deviation   : 3.291e-11  [OK - same discrete space]
+  Rayleigh quotients of the exact basis (must equal mu):
+    Re TS_kA  345.4361540594
+    Im TS_kA  345.4361540660
+    Re TS_k1  197.3920880217
+
+  mode      sin(theta) L2     sin(theta) H1     |u_h-u|_1^2    lam*||u_h-u||_0^2   lam_h-lam
+  lambda_1  9.211879e-02      2.553331e-01        13.65323        1.67861        11.97462
+  lambda_2  1.155619e-01      2.916010e-01        31.68933        4.62865        27.06068
+  lambda_3  3.339311e-01      5.409302e-01       128.09071       39.65781        88.43290
+
+  direction of P_E u_h inside E (deg, basis Re/Im TS_kA): 45.000, 135.000   separation 90.000 deg
+  ratio  (sin_H1_3/sin_H1_2)^2 = 3.4412    vs   (lam3_h-lam)/(lam2_h-lam) = 3.2679
+
+=== T_F, refinement level 3: 165 nodes, 512 tets, DimCG=969, interior=455 ===
+  Ritz (this code): 198.7573723210 350.1231219256 355.7755647194
+  Ritz (MATLAB)   : 198.7573723210 350.1231219256 355.7755647194
+  max deviation   : 2.700e-11  [OK - same discrete space]
+  Rayleigh quotients of the exact basis (must equal mu):
+    Re TS_kA  345.4361540381
+    Im TS_kA  345.4361540381
+    Re TS_k1  197.3920880218
+
+  mode      sin(theta) L2     sin(theta) H1     |u_h-u|_1^2    lam*||u_h-u||_0^2   lam_h-lam
+  lambda_1  1.515718e-02      8.424525e-02         1.41064        0.04535         1.36528
+  lambda_2  2.895353e-02      1.192213e-01         4.97661        0.28964         4.68697
+  lambda_3  4.969776e-02      1.773688e-01        11.19312        0.85371        10.33941
+
+  direction of P_E u_h inside E (deg, basis Re/Im TS_kA): 45.025, 135.025   separation 90.000 deg
+  ratio  (sin_H1_3/sin_H1_2)^2 = 2.2133    vs   (lam3_h-lam)/(lam2_h-lam) = 2.2060
+
+=== convergence of the eigenfunction distance (level 2 -> 3) ===
+  mode       sin_L2 (l2)   sin_L2 (l3)   rate      sin_H1 (l2)   sin_H1 (l3)   rate
+  lambda_1   9.2119e-02    1.5157e-02    2.60     2.5533e-01    8.4245e-02    1.60
+  lambda_2   1.1556e-01    2.8954e-02    2.00     2.9160e-01    1.1922e-01    1.29
+  lambda_3   3.3393e-01    4.9698e-02    2.75     5.4093e-01    1.7737e-01    1.61

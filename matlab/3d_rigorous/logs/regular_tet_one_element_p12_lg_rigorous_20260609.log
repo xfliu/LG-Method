@@ -1,0 +1,73 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+One-element P12 bubble rigorous LG, unit regular tetrahedron
+  Dim bubble=165, Dim P_12=455
+  Ritz upper bounds (double): 150.9727216782 278.6982779029 278.6982779029 278.6982779029 
+  rho2=264.5223894731 rho5=386.4419682205 lhat=200.0
+  Scalar RT12: DimRT=1456, DimDG=455
+  DegK=455, DegF=91, DegRTInner=1092, DegRTElt=1456
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.754733e-16.] 
+[> In GetElementTransMat (line 137)
+In build_scalar_rt_matrices (line 136)
+In run_regular_tet_one_element_lg_rigorous (line 91)
+] 
+  Scalar RT done: A_rt 1456x1456 (nnz=2119936), B_rt 455x1456 (nnz=662480)
+  DimRT=1456 DimDG=455
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.561648e-17.] 
+[> In run_regular_tet_one_element_lg_rigorous (line 101)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.561648e-17.] 
+[> In run_regular_tet_one_element_lg_rigorous (line 102)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.561648e-17.] 
+[> In run_regular_tet_one_element_lg_rigorous (line 101)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.561648e-17.] 
+[> In run_regular_tet_one_element_lg_rigorous (line 102)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.561648e-17.] 
+[> In run_regular_tet_one_element_lg_rigorous (line 101)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.561648e-17.] 
+[> In run_regular_tet_one_element_lg_rigorous (line 102)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.561648e-17.] 
+[> In run_regular_tet_one_element_lg_rigorous (line 101)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.561648e-17.] 
+[> In run_regular_tet_one_element_lg_rigorous (line 102)
+] 
+  ||w1|| per col: 7.41e+04 1.50e+05 1.94e+05 2.51e+05 
+  Assembling rigorous Goerisch A2 (full form, tight via b=MFB\w1)...
+  A2(k,k)*(lambda_k+lhat) [should be ~1]: 1.000000 1.000002 1.000002 1.000003 
+  A2 max interval radius: 9.816e-02
+
+  B PD: lambda1 group spd=0 (margin 1.135e+02); cluster spd=0 (margin 1.077e+02)
+
+Certified one-element P12 rigorous LG bounds:
+  k     lower bound        upper bound        rel gap
+  1   -Inf   150.972721678400   Inf%
+  2   NaN   278.698277903054   NaN%
+  3   NaN   278.698277903054   NaN%
+  4   NaN   278.698277903054   NaN%

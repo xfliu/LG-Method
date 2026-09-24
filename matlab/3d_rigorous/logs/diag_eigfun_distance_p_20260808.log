@@ -1,0 +1,68 @@
+Distance from the exact eigenspace to the computed modes, for CG^p with p = 2, 3.
+
+Degree-generalised companion to diag_eigfun_distance.py (which is kept unchanged, at
+p=2, so its recorded log stays byte-reproducible).  The p=2 rows here must reproduce
+that script's numbers exactly -- that is the cross-check printed at the end.
+
+Same quantities as the original: sin(theta) to the exact eigenspace E in L^2 and the
+H^1-seminorm, the exact eigenvalue-error identity, and the direction/parity of each
+mode inside E under the mesh symmetry tau.
+
+
+
+=== T_F, CG^2, refinement level 2: 64 tets, DimCG=165, interior=35 ===
+  Ritz (this code): 209.3667080088 372.4968338014 433.8690500095
+  Ritz (MATLAB)   : 209.3667080088 372.4968338014 433.8690500095
+  max deviation   : 3.212e-11  [OK - same discrete space]
+
+  mode      sin(theta) L2     sin(theta) H1     |u_h-u|_1^2   lam*||u_h-u||_0^2   lam_h-lam
+  lambda_1  9.211879e-02      2.553331e-01        13.65323       1.67861        11.97462
+  lambda_2  1.155619e-01      2.916010e-01        31.68933       4.62865        27.06068
+  lambda_3  3.339311e-01      5.409302e-01       128.09071      39.65781        88.43290
+
+  parity under tau  <u o tau, u>/||u||^2:
+    lambda_1  +1.000000000000  EVEN
+    lambda_2  +1.000000000000  EVEN   direction in E  45.000 deg
+    lambda_3  -1.000000000000  ODD    direction in E 135.000 deg
+
+  ratio (sin_H1_3/sin_H1_2)^2 = 3.4412   vs  (lam3_h-lam)/(lam2_h-lam) = 3.2679
+
+=== T_F, CG^3, refinement level 2: 64 tets, DimCG=455, interior=165 ===
+  Ritz (this code): 198.5584277775 351.3784798005 353.8357406692
+  Ritz (MATLAB)   : 198.5584277775 351.3784798005 353.8357406692
+  max deviation   : 2.939e-11  [OK - same discrete space]
+
+  mode      sin(theta) L2     sin(theta) H1     |u_h-u|_1^2   lam*||u_h-u||_0^2   lam_h-lam
+  lambda_1  2.250654e-02      7.985992e-02         1.26634       0.10000         1.16634
+  lambda_2  4.860267e-02      1.386858e-01         6.75880       0.81648         5.94233
+  lambda_3  6.144909e-02      1.656050e-01         9.70518       1.30560         8.39959
+
+  parity under tau  <u o tau, u>/||u||^2:
+    lambda_1  +1.000000000000  EVEN
+    lambda_2  +1.000000000000  EVEN   direction in E  45.000 deg
+    lambda_3  -1.000000000000  ODD    direction in E 135.000 deg
+
+  ratio (sin_H1_3/sin_H1_2)^2 = 1.4259   vs  (lam3_h-lam)/(lam2_h-lam) = 1.4135
+
+=== T_F, CG^2, refinement level 3: 512 tets, DimCG=969, interior=455 ===
+  Ritz (this code): 198.7573723210 350.1231219256 355.7755647194
+  Ritz (MATLAB)   : 198.7573723210 350.1231219256 355.7755647194
+  max deviation   : 3.115e-11  [OK - same discrete space]
+
+  mode      sin(theta) L2     sin(theta) H1     |u_h-u|_1^2   lam*||u_h-u||_0^2   lam_h-lam
+  lambda_1  1.515718e-02      8.424525e-02         1.41064       0.04535         1.36528
+  lambda_2  2.895353e-02      1.192213e-01         4.97661       0.28964         4.68697
+  lambda_3  4.969776e-02      1.773688e-01        11.19312       0.85371        10.33941
+
+  tau does not preserve this mesh (no residual symmetry)
+
+  ratio (sin_H1_3/sin_H1_2)^2 = 2.2133   vs  (lam3_h-lam)/(lam2_h-lam) = 2.2060
+
+=== cross-check against the archived p=2 run (diag_eigfun_distance.py) ===
+  p=2 values reproduce the archived run
+
+=== degree comparison on the level-2 mesh (64 tets) ===
+  the error asymmetry within the degenerate pair, by degree
+  p   DimCG  lam_2 error   lam_3 error   ratio   sin_H1 (2)   sin_H1 (3)
+  2     165     27.06068      88.43290   3.268   2.9160e-01   5.4093e-01
+  3     455      5.94233       8.39959   1.414   1.3869e-01   1.6560e-01

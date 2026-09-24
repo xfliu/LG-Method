@@ -1,0 +1,35 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+  Refined mesh: 10 nodes, 8 tets, hmax~0.707107
+  Refined mesh: 35 nodes, 64 tets, hmax~0.353553
+[TF-ref2-P2] CG^2: DimCG=165 interior=35 (64 tets)
+[TF-ref2-P2] Ritz upper bounds (double): 209.3667080088 372.4968338014 433.8690500095 
+  Scalar RT2: DimRT=1728, DimDG=640
+  DegK=10, DegF=6, DegRTInner=12, DegRTElt=36
+  Scalar RT done: A_rt 1728x1728 (nnz=79488), B_rt 640x1728 (nnz=23037)
+[TF-ref2-P2] Factoring shifted SP (2368)...
+[TF-ref2-P2] Assembling rigorous A0,A1 (interval)...
+[TF-ref2-P2] Assembling rigorous A2 (full form, tight via b=MFB\w1)...
+[TF-ref2-P2] A2(k,k)*(lambda_k+lhat) [~1]: 1.025539 1.043414 1.126809 
+[TF-ref2-P2] A2 max interval radius: 7.116e-14
+[TF-ref2-P2] group [1] rho=345.436154: B_spd=1 margin=1.361e+02 
+[TF-ref2-P2] group [2  3] rho=394.784176: B_spd=1 margin=-3.908e+01 
+
+Certified T_F P2 ref=2 rigorous LG bounds vs EXACT:
+  k     lower bound        exact              upper bound        lb<exact ub>exact
+  1   171.349851167909   197.392088021787   209.366708008796      1        1
+  2   -881.761171388929   345.436154038128   372.496833801420      1        1
+  3   65.218698493971   345.436154038128   433.869050009548      1        1
+  PASS: all certified bounds bracket the exact eigenvalues.

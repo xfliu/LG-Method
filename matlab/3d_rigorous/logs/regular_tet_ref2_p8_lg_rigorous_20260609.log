@@ -1,0 +1,24 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+  Refined mesh: 10 nodes, 8 tets, hmax~0.707107
+  Refined mesh: 35 nodes, 64 tets, hmax~0.353553
+[reg-64elt-P8] CG^8: DimCG=6545 interior=4495 (64 tets)
+[reg-64elt-P8] Ritz upper bounds (double): 150.9727121736 278.6977643710 278.6977645094 278.6977661142 
+  Scalar RT8: DimRT=30240, DimDG=10560
+  DegK=165, DegF=45, DegRTInner=360, DegRTElt=540
+  Scalar RT done: A_rt 30240x30240 (nnz=18468000), B_rt 10560x30240 (nnz=5702400)
+[reg-64elt-P8] Factoring shifted SP (40800)...
+[reg-64elt-P8] Assembling rigorous A0,A1 (interval)...
+[reg-64elt-P8] Assembling rigorous A2 (full form, tight via b=MFB\w1)...

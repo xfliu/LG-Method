@@ -1,0 +1,43 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+mesh generation: FacetList done
+mesh generation: EdgeList done
+mesh generation: Facet2Element done
+Schrodinger CR: 127661 elements, 263514 facets
+  CR DOFs: 247130 (interior facets)
+    10000 / 127661 elements
+    20000 / 127661 elements
+    30000 / 127661 elements
+    40000 / 127661 elements
+    50000 / 127661 elements
+    60000 / 127661 elements
+    70000 / 127661 elements
+    80000 / 127661 elements
+    90000 / 127661 elements
+    100000 / 127661 elements
+    110000 / 127661 elements
+    120000 / 127661 elements
+  Solving CR EVP (247130 x 247130)...
+  h_max = 0.035528, C_h = 0.011235, C_h^2 = 1.2622e-04
+
+  CR eigenvalues and Liu lower bounds:
+      k             nu_k (CR)           lambda_k_lb   Liu correction
+      1        150.7548672276        147.9397933010       1.9029e-02
+      2        277.9517192483        268.5307236454       3.5083e-02
+      3        277.9557714481        268.5345058053       3.5084e-02
+      4        277.9628284943        268.5410925585       3.5085e-02
+      5        415.7901368118        395.0568918105       5.2482e-02
+rho_2 = 268.530723645427
+rho_5 = 395.056891810491

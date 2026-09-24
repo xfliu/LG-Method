@@ -1,0 +1,36 @@
+ 
+ 
+=========================================================================
+*****  Please provide proper reference to                                
+*****     S.M. Rump: INTLAB - INTerval LABoratory. In Tibor Csendes,     
+*****       editor, Developments in Reliable Computing, pages 77-104.    
+*****       Kluwer Academic Publishers, Dordrecht, 1999,                 
+*****       http://www.ti3.tuhh.de/intlab .                              
+*****                                                                    
+*****  Commercial use or use in conjunction with a commercial program    
+*****  which requires INTLAB or part of INTLAB to function properly      
+*****  requires a special license. Please contact me  rump (at) tuhh.de  
+ 
+ 
+  Refined mesh: 10 nodes, 8 tets, hmax~0.707107
+  Refined mesh: 35 nodes, 64 tets, hmax~0.353553
+  Refined mesh: 165 nodes, 512 tets, hmax~0.207289
+[TF-ref3-P3] CG^3: DimCG=2925 interior=1771 (512 tets)
+[TF-ref3-P3] Ritz upper bounds (double): 197.4175913156 345.5866754948 345.7388492785 
+  Scalar RT3: DimRT=26880, DimDG=10240
+  DegK=20, DegF=10, DegRTInner=30, DegRTElt=70
+  Scalar RT done: A_rt 26880x26880 (nnz=2419200), B_rt 10240x26880 (nnz=716800)
+[TF-ref3-P3] Factoring shifted SP (37120)...
+[TF-ref3-P3] Assembling rigorous A0,A1 (interval)...
+[TF-ref3-P3] Assembling rigorous A2 (full form, tight via b=MFB\w1)...
+[TF-ref3-P3] A2(k,k)*(lambda_k+lhat) [~1]: 1.000062 1.000265 1.000534 
+[TF-ref3-P3] A2 max interval radius: 1.816e-13
+[TF-ref3-P3] group [1] rho=345.436154: B_spd=1 margin=1.480e+02 
+[TF-ref3-P3] group [2  3] rho=394.784176: B_spd=1 margin=4.905e+01 
+
+Certified T_F P3 ref=3 rigorous LG bounds vs EXACT:
+  k     lower bound        exact              upper bound        lb<exact ub>exact
+  1   197.326517688624   197.392088021787   197.417591315668      1        1
+  2   342.227090878401   345.436154038128   345.586675494872      1        1
+  3   343.846088479176   345.436154038128   345.738849278548      1        1
+  PASS: all certified bounds bracket the exact eigenvalues.
